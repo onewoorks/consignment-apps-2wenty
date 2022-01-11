@@ -15,7 +15,8 @@ class SalesController extends Controller{
     }
 
     private function ownerHeader($resit_id){
-        $data[] = $this->text("ZWENTY TWO GLOBAL SERVICES",1,1);
+        $data[] = $this->text("");
+        $data[] = $this->text("2WENTY TWO GLOBAL SERVICES",1,1,1);
         $data[] = $this->text(["+6017802422","Receipt #$resit_id"]);
         $this->print_data = $data;
     }
@@ -24,18 +25,19 @@ class SalesController extends Controller{
         $data = $this->print_data;
         $data[] = $this->line();
         $data[] = $this->text($kepada_kedai);
-        $data[] = $this->text("");
-        $data[] = $this->text("");
         $data[] = $this->line();
         $data[] = $this->text($bank_name,0,1);
         $data[] = $this->text($bank_acct_name,0,1);
         $data[] = $this->text($account_bank,0,1);
+        $data[] = $this->text("");
         $data[] = $this->text($staff,0,1);
         $data[] = $this->text(date('j F Y h:i'),0,1);
+        $data[] = $this->text("");
         return $data;
     }
 
     public function getSales($resit_id){
+        $data = array();
         $this->ownerHeader($resit_id);
         $data = $this->print_data;
 

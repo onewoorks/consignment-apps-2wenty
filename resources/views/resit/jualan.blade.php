@@ -1,1 +1,1 @@
-{{ $resit_data }}
+{!! $resit_data !!}
