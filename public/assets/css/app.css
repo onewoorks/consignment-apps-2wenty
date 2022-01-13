@@ -1,0 +1,41 @@
+a { text-decoration:none; color: inherit;}
+body { font-size: 13px,}
+h1 { font-size: 20px; margin-bottom:0px;};
+h3 { font-size:16px};
+
+
+.text-main { font-size: 1.1em; font-weight: bold}
+.text-sub { font-size: 0.9em; font-style:italic}
+.text-bignumber { font-size: 1.4em; line-height: 43px}
+
+.header { 
+    background-color: orange;
+    padding:10px;
+    position: fixed;
+    margin:0;
+    width: 100vw;
+    z-index: 9;
+}
+
+footer { height:20px;}
+
+.container-page { padding-top: 60px}
+
+#sidemenu { 
+    position: fixed;
+    z-index: 10;
+    width: 200px;
+    top: 44px;
+    height: 100vh;
+    background-color: white;
+    border-right: 1px solid #ddd;
+    -webkit-box-shadow: 5px 5px 10px 0 rgba(0,0,0,0.2);
+box-shadow: 5px 5px 10px 0 rgba(0,0,0,0.2);
+}
+
+ul.list-unstyled {
+    /* padding: 20px; */
+}
+ul.list-unstyled li {
+    padding:5px 20px;
+}

@@ -14,9 +14,13 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('pages.home');
 });
 
 Route::prefix('resit')->group(function () {
     Route::get('/sales/{resit_id}', [App\Http\Controllers\Resit\SalesController::class, 'getSales']);
+});
+
+Route::prefix('inventory')->group(function () {
+    Route::get('/',[App\Http\Controllers\Inventory\ItemsController::class, 'index']);
 });
