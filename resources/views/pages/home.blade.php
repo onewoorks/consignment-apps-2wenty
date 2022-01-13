@@ -13,52 +13,23 @@
             </div>
         </div>
 
-        <div class="d-grid mt-4">
-            <a
-                class=""
-                href="/inventory">
-                <div class="card mt-2">
-                    <div class="card-body">
-                        <h3>Inventory</h3>
-                        <div>Item registered to be sold</div>
-                    </div>
-                </div>
-            </a>
+        <div class="d-grid mt-4 mb-4">
+            @foreach($menu as $m)
+                @if(strtolower($m['title']) != 'home')
+                    <a
+                        class=""
+                        href="/inventory">
+                        <div class="card mt-2">
+                            <div class="card-body">
+                                <h3>{{ $m['title'] }}</h3>
+                                <div>{{ $m['description'] }}</div>
+                            </div>
+                        </div>
+                    </a>
+                @endif
+            @endforeach
 
             <a
-                class=""
-                href="/inventory">
-                <div class="card mt-2">
-                    <div class="card-body">
-                        <h3>Customers</h3>
-                        <div>List of customer registered</div>
-                    </div>
-                </div>
-            </a>
-
-            <a
-                class=""
-                href="/sales">
-                <div class="card mt-2">
-                    <div class="card-body">
-                        <h3>Sales</h3>
-                        <div>List of sales reports</div>
-                    </div>
-                </div>
-            </a>
-
-            <a
-                class=""
-                href="/sales">
-                <div class="card mt-2">
-                    <div class="card-body">
-                        <h3>Setup</h3>
-                        <div>Your profile preferences</div>
-                    </div>
-                </div>
-            </a>
-
-        <a
             class=""
             href="my.bluetoothprint.scheme://https://consignment-apps.onewoorks-solutions.com/resit/sales/1">
             <div class="card mt-2">

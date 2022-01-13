@@ -39,3 +39,9 @@ ul.list-unstyled {
 ul.list-unstyled li {
     padding:5px 20px;
 }
+
+footer { 
+    font-size:0.7em;
+    color: gray;
+    font-style: italic;
+}
